@@ -2,13 +2,23 @@
 
 class BowlingGame
 {
+    /**
+     * @var array
+     */
     protected $rolls = [];
 
+    /**
+     * @param $pins
+     */
     public function roll($pins)
     {
+        $this->guardAgainstInvalidRoll($pins);
         $this->rolls[] = $pins;
     }
 
+    /**
+     * @return int|mixed
+     */
     public function score()
     {
         $score = 0;
@@ -24,7 +34,7 @@ class BowlingGame
 
             elseif ($this->isSpare($roll))
             {
-                $score += 10 + $this->rolls[$roll + 2];
+                $score += 10 + $this->spareBonus($roll);
                 $roll += 2;
             }
             else
@@ -65,8 +75,31 @@ class BowlingGame
         return $this->rolls[$roll] == 10;
     }
 
+    /**
+     * @param $roll
+     * @return mixed
+     */
     private function strikeBonus($roll)
     {
-        
+        return $this->rolls[$roll + 1] + $this->rolls[$roll + 2];
+    }
+
+    /**
+     * @param $roll
+     * @return mixed
+     */
+    private function spareBonus($roll)
+    {
+        return $this->rolls[$roll + 2];
+    }
+
+    /**
+     * @param $pins
+     */
+    protected function guardAgainstInvalidRoll($pins)
+    {
+        if ($pins < 0) {
+            throw new InvalidArgumentException;
+        }
     }
 }

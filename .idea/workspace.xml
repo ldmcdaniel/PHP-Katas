@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2734f5c7-4bc7-4780-967e-e708d3a0f051" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/BowlingGameSpec.php" afterPath="$PROJECT_DIR$/spec/BowlingGameSpec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BowlingGame.php" afterPath="$PROJECT_DIR$/src/BowlingGame.php" />
     </list>
     <ignored path="PHP-Katas.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +30,8 @@
           <file leaf-file-name="BowlingGame.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/BowlingGame.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.91654676">
-                  <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.58417267">
+                  <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -44,8 +44,8 @@
           <file leaf-file-name="BowlingGameSpec.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/BowlingGameSpec.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5410072">
-                  <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.5827338">
+                  <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
                   <folding />
                 </state>
               </provider>
@@ -313,16 +313,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/BowlingGameSpec.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5410072">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.5827338">
+          <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BowlingGame.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91654676">
-          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.58417267">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding />
         </state>
       </provider>
