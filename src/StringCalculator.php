@@ -1,21 +1,48 @@
 <?php
 
+use Symfony\Component\Console\Exception\InvalidArgumentException;
+
 class StringCalculator
 {
+    const MAX_NUMBER_ALLOWED = 1000;
+
+    /**
+     * @param $numbers
+     * @return int
+     */
     public function add($numbers)
     {
-        $numbers = preg_split('/\s*(,|\\\n)\s*/', $numbers);
+        $numbers = $this->parseNumbers($numbers);
 
         $solution = 0;
 
         foreach ($numbers as $number)
         {
-            if ($number < 0) throw new InvalidArgumentException('Invalid number provider: -2');
-            if ($number >= 1000) continue;
+            $this->guardAgainstInvalidNumber($number);
+            if ($number >= self::MAX_NUMBER_ALLOWED) continue;
 
             $solution += $number;
         }
 
         return $solution;
+    }
+
+    /**
+     * @param $number
+     */
+    protected function guardAgainstInvalidNumber($number)
+    {
+        if ($number < 0) {
+            throw new InvalidArgumentException("Invalid number provided: {$number}");
+        }
+    }
+
+    /**
+     * @param $numbers
+     * @return array
+     */
+    protected function parseNumbers($numbers)
+    {
+        return array_map('intval', preg_split('/\s*(,|\\\n)\s*/', $numbers));
     }
 }
